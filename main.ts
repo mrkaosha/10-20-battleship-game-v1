@@ -55,6 +55,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     grid.move(cursor, 1, 0)
     grid.place(shadowCursor, tiles.getTileLocation(grid.spriteCol(cursor) + -1, grid.spriteRow(cursor)))
 })
+/**
+ * moveBoat needs changes to take in the boatRotateArrayP1 or boatRotateArrayP2
+ */
 function moveBoat (boatArray: any[]) {
     makeBoatVisible(boatArray)
     if (grid.spriteRow(cursor) >= 8 - boatArray.length && boatRotateArrayP1[currentBoat] == "up") {
